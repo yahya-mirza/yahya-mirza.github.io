@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yahya Mirza</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- =========================
+       Navbar
+  ========================== -->
+  <header class="navbar">
+    <div class="logo">Yahya Mirza</div>
+
+    <nav>
+      <button class="menu-toggle">Menu</button>
+      <ul class="dropdown">
+        <li><a href="#hero">About Me</a></li>
+         <li><a href="#portfolio">Engineering Portfolio</a></li>
+        <li><a href="#resume">Resume</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         Hero Section
+    ========================== -->
+    <section class="hero fade-in" id = "hero">
+      <div class="hero-content">
+
+        <!-- LEFT: PHOTO CARD -->
+        <div class="hero-card">
+          <img src="assets/images/pro-photo.jpg" alt="Professional Photo" class="hero-photo">
+
+          <div class="hero-links">
+            <a 
+            href="assets/resume/Yahya_Mirza_Resume.pdf" 
+            class="hero-link"
+            download="Yahya_Mirza_Resume.pdf"
+            aria-label="Download Resume"
+            >
+  <img src="assets/icons/resume.svg" alt="Download Resume">
+</a>
+
+            <a href="mailto:yahyam0626@gmail.com" class="hero-link">
+              <img src="assets/icons/email.svg" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/yahya-mirza-09a04b334/" class="hero-link">
+              <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: TEXT -->
+        <div class="hero-text">
+          <h1>Yahya Mirza</h1>
+          <p>Mechanical Engineering Student @ UC San Diego | Robotics & Mechatronics</p>
+          <p>
+            Hey I'm Yahya, nice to meet you! Currently, I am in the process of an end-to-end production 
+            for a linear slider mechanism for Yonder Dynamics, UCSD's competition Mars Rover team, 
+            implementing statics analysis, GD&T, and DFM principles. On top of that, over this past 
+            quarter my peers and I successfully built a competition soccer robot utilizing risk reduction 
+            principles, receiving the "Best Manufacturing" award and nominated for "Best Technical Presentation" 
+            out of 34 teams. In addition, I am the co-founder and former project lead for Foothill College's 
+            award-winning FireFlight RC Plane, an ML-Driven, aerial sensing RC Plane for wildfire prediction 
+            and evacuation. 
+
+            At home, I am working on numerous projects, including a WiFi and sensor-based automatic plant 
+            watering apparatus, in which you can water multiple plants in your home without having to touch it! 
+            I am proficient in SOLIDWORKS, Arduino, Fusion 360, OnShape, and MATLAB, while also being well versed 
+            in microcontrollers and other electronics.
+
+            Feel free to reach out if you are interested in anything mechanical design, machining, or technology!
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         Engineering Portfolio
+    ========================== -->
+    <section class="portfolio fade-in" id="portfolio">
+      <div class="portfolio-card-container">
+
+        <h2>Engineering Portfolio</h2>
+        <p class="section-subtitle"></p>
+
+        <div class="portfolio-grid">
+          <a href="projects/fireflight/" class="portfolio-card fade-in">
+            <img src="assets/images/Full Plane Model.png" alt="FireFlight RC Plane">
+            <div class="card-content">
+              <h3>FireFlight RC Plane</h3>
+              <p>
+                Designed and built an RC aircraft from scratch, focusing on stability,
+                control surfaces, and structural optimization.
+              </p>
+            </div>
+          </a>
+
+          <a href="projects/yonderdynamics/" class="portfolio-card fade-in">
+            <img src="projects/yonderdynamics/images/Linear Slider Isometric view.png" alt="Linear Slider">
+            <div class="card-content">
+              <h3>Linear Slider Module - Yonder Dynamics</h3>
+              <p>
+                Designed a linear slider mechanism for a 5-axis robotic arm mounted on a Mars Rover, 
+                implementing statics analysis and GD&T principles.
+              </p>
+            </div>
+          </a>
+
+          <a href="projects/stymbappe/" class="portfolio-card fade-in">
+  <video
+    class="portfolio-media"
+    src="projects/stymbappe/images/Competiton Match.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <div class="card-content">
+    <h3>Competiton Soccer Robot - STYMBappé</h3>
+    <p>For UCSD's MAE 3 Annual Robot Contest 2025</p>
+  </div>
+</a>
+
+
+          <a href="projects/shoulderexo/" class="portfolio-card fade-in">
+            <img src="projects/shoulderexo/images//Shoulder Printed Out.png" alt="Shoulder Exoskeleton">
+            <div class="card-content">
+              <h3>Shoulder Exoskeleton - Nanotech @ UC Berkeley</h3>
+              <p>
+                Built a lightweight, wearable exoskeleton designed to smoothen lateral arm movement as corresponding muscles are stimulated via an integrated AI powered TENS unit apparatus. 
+              </p>
+            </div>
+          </a>
+
+          <a href="projects/plantwatering/" class="portfolio-card fade-in">
+  <video
+    class="portfolio-media"
+    src="projects/plantwatering/images/IMG_8926.mp4"
+    autoplay
+    loop
+    muted
+    playsinline
+  ></video>
+
+  <div class="card-content">
+    <h3>Automatic Plant Watering Machine (WIP)</h3>
+    <p>An Arduino Based Automatic Plant Watering System That Tips a Watering Can From Sensory Data To Optimize Plant Health and Growth</p>
+  </div>
+</a>
+
+          <a href="projects/motionnerfgun/" class="portfolio-card fade-in">
+            <img src="projects/motionnerfgun/images/Gun Assebly.png" alt="FireFlight RC Plane">
+            <div class="card-content">
+              <h3>Motion Activated Nerf Gun</h3>
+              <p>
+                An Arduino controlled Nerf Gun Utilizing an HC-SR501 PIR Motion Sensor and an SG90 Servo Motor
+              </p>
+            </div>
+          </a>
+
+          <a href="projects/misc/" class="portfolio-card fade-in">
+            <img src="projects/misc/images/SAE Tire Stand FEA.png" alt="FireFlight RC Plane">
+            <div class="card-content">
+              <h3>Miscellaneous</h3>
+              <p>
+                A collection of various smaller projects, including FEA analysis of a SAE Car Stand, Ball Bearing CAD, and more!
+              </p>
+            </div>
+          </a>
+
+
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="resume-section fade-in" id = "resume">
+  <div class="resume-card">
+
+    <div class="resume-header">
+      <h2>Resume</h2>
+      <a href="assets/resume/Yahya_Mirza_Resume.pdf" target="_blank" class="resume-download">
+        Open Fullscreen
+      </a>
+    </div>
+
+    <div class="resume-viewer">
+      <iframe
+        src="assets/resume/Yahya_Mirza_Resume.pdf"
+        title="Yahya Mirza Resume"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+    
+    <!-- =========================
+         Experience Section
+    ========================== -->
+    
+    
+    <!--  <section class="experience fade-in">
+      <h2>Past Experience</h2>
+
+      <div class="experience-cards">
+        <div class="card fade-in">
+          <h3>FireFlight RC Plane Project</h3>
+          <p class="role">Project Lead · 2024–Present</p>
+          <p>
+            Led a team to design and build an RC aircraft from scratch, focusing on aerodynamics, electronics, and structural optimization.
+          </p>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Robotics & Mechatronics Projects</h3>
+          <p class="role">Mechanical Engineer</p>
+          <p>
+            Designed mechanical systems using SolidWorks and Arduino-based control systems for automation and robotics applications.
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- =========================
+         Call-to-Action Section
+          <section class="cta fade-in" id = "buttons">
+      <a href="resume.html" class="cta-btn">View Resume</a>
+      <a href="contact.html" class="cta-btn">Get in Touch</a>
+    </section>
+    ========================== -->
+   
+
+  </main>
+
+  <!-- =========================
+       Scripts
+  ========================== -->
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/scroll.js"></script>
+</body>
+</html>

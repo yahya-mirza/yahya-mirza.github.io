@@ -1,0 +1,550 @@
+/* -------------------------
+   Base / Reset
+-------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* -------------------------
+   Menu Buttons
+-------------------------- */
+.menu-toggle,
+.submenu-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+  width: 100%;
+  text-align: left;
+  color: #111827;
+}
+
+.menu-toggle {
+  font-weight: 500;
+}
+
+/* -------------------------
+   Dropdown Menu
+-------------------------- */
+nav {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 0.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  min-width: 220px;
+  animation: fadeSlide 0.25s ease forwards;
+  display: none;
+  z-index: 10;
+}
+
+.dropdown.open {
+  display: block;
+}
+
+.dropdown li {
+  list-style: none;
+}
+
+.dropdown a,
+.submenu-toggle {
+  display: block;
+  text-decoration: none;
+  color: #111827;
+  padding: 0.6rem 1.2rem;
+}
+
+.dropdown a:hover,
+.submenu-toggle:hover {
+  background: #f3f4f6;
+}
+
+/* -------------------------
+   Submenu
+-------------------------- */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.submenu a {
+  font-size: 0.95rem;
+  padding-left: 1.8rem;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  padding: 4rem 2rem 2rem;
+  background: #f9fafb;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Hero Card
+========================= */
+.hero-card {
+  transform: translateX(-24px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem 2.25rem 2rem;
+  box-shadow: 0 22px 44px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-card:hover {
+  transform: translateX(-24px) translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.12),
+              0 8px 18px rgba(0,0,0,0.08);
+}
+
+/* Hero Photo */
+.hero-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #111827;
+  display: block;
+}
+
+/* Hero Icon Links */
+.hero-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+.hero-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-link:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.hero-link img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Hero Text */
+.hero-text {
+  flex: 1 1 0;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 0.8rem;
+}
+
+/* =========================
+   About Section
+========================= */
+.about {
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+/* =========================
+   Experience Section
+========================= */
+.experience {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.experience h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.experience-cards .card {
+  background: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-cards .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.experience-cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-cards .card p {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.3rem;
+}
+
+/* =========================
+   Call-to-Action Section
+========================= */
+.cta {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  padding: 0.8rem 1.6rem;
+  background: #111827;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #374151;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Scroll & Animation
+========================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   Portfolio Section
+========================= */
+.portfolio {
+  padding: 1rem 2rem 4rem;
+}
+
+.portfolio-card-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.portfolio h2,
+.portfolio .section-subtitle {
+  text-align: left;
+}
+
+/* Portfolio Grid: 3 columns, responsive */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Individual portfolio cards */
+.portfolio .portfolio-card {
+  display: block;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio .portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+}
+
+.portfolio .portfolio-card img,.portfolio-card video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio .card-content {
+  padding: 1.25rem;
+}
+
+.portfolio .card-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.portfolio .card-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+/* Responsive Portfolio */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Project Page
+========================= */
+.project-page {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.project-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.project-hero {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+}
+
+.project-page section {
+  margin-bottom: 2.5rem;
+}
+
+.project-page h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-page ul {
+  padding-left: 1.2rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* =========================
+   Responsive Tweaks
+========================= */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-card {
+    padding: 1.75rem 1.5rem 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .about h2,
+  .experience h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+   Resume Section
+========================= */
+.resume-section {
+  padding: 2rem 2rem 4rem;
+}
+
+.resume-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Header row */
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.resume-header h2 {
+  font-size: 2rem;
+}
+
+/* Open button */
+.resume-download {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: #f3f4f6;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.resume-download:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+/* PDF Viewer */
+.resume-viewer {
+  width: 100%;
+  height: 900px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}

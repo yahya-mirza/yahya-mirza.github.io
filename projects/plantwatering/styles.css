@@ -1,0 +1,230 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f6f7f9;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   MEDIA GRID
+========================= */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   MEDIA BLOCK (Independent)
+========================= */
+.media-block {
+  display: inline-flex;               /* prevents height matching */
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.media-block:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.media-image img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 420px;                  /* prevents overpowering */
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;                /* rounded image */
+  display: block;
+}
+
+/* =========================
+   CAPTION CARD
+========================= */
+.media-caption-card {
+  margin-top: 12px;                   /* space between image + caption */
+  padding: 14px 18px;                 /* fixed px padding */
+  width: calc(100% + 24px);           /* grows relative to image width */
+  background: #f3f4f6;
+  border-radius: 18px;
+  text-align: center;
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+.media-caption-card p {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .media-image img {
+    max-height: 320px;
+  }
+}
+
+
+.media-image video {
+  width: 100%;
+  max-height: 220px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  display: block;
+  cursor: pointer;
+  background: #000;
+}
+
+
+/* ===============================
+   PDF MEDIA CARD (IFRAME)
+================================ */
+
+.pdf-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hard container for the PDF */
+.pdf-frame-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* PDF iframe itself */
+.pdf-frame-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  /* Slight zoom helps toolbar not dominate */
+  transform: scale(1.02);
+  transform-origin: center;
+}
+
+/* Caption alignment safety */
+.pdf-card .media-caption {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+/* =========================
+   Project Page Navbar
+========================= */
+.project-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* Back button */
+.project-back {
+  text-decoration: none;
+  font-weight: 500;
+  color: #111827;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.project-back:hover {
+  background: #f3f4f6;
+}
+
+/* Right-side menu */
+.project-menu {
+  position: relative;
+}
+
+.project-menu-toggle {
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+.project-menu-toggle:hover {
+  background: #f3f4f6;
+}
+
+/* Dropdown */
+.project-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  list-style: none;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  min-width: 220px;
+  display: none;
+  z-index: 30;
+}
+
+.project-dropdown li a {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  color: #111827;
+}
+
+.project-dropdown li a:hover {
+  background: #f3f4f6;
+}
+
+/* Open state */
+.project-dropdown.open {
+  display: block;
+}
