@@ -332,7 +332,9 @@ nav {
    Portfolio Section
 ========================= */
 .portfolio {
-  padding: 1rem 2rem 4rem;
+  max-width: 1400px;        /* wider than before */
+  margin: 3rem auto;        /* centers the section */
+  padding: 0 4rem;          /* more space on left and right */
 }
 
 .portfolio-card-container {
@@ -548,3 +550,99 @@ nav {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* =========================
+   HORIZONTAL PORTFOLIO CARD
+========================= */
+.portfolio-horizontal-card {
+  display: flex;
+  align-items: stretch;        /* make all columns full height */
+  background: none;
+  border-radius: 16px;
+  overflow: hidden;            /* ensures edges are flush */
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  padding: 3;                  /* REMOVE card padding */
+  position: relative;
+  
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+.portfolio-horizontal-card:hover {
+  transform: translateY(-6px);
+}
+
+
+
+/* LEFT: Organization Image */
+/* LEFT: Logo */
+.portfolio-left {
+  flex: 0 0 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;               /* optional, can shrink if needed */
+  background: #f9fafb;         /* subtle contrast for left column */
+}
+
+
+.portfolio-left img {
+  width: 100%;
+  height: auto;
+  max-width: 180px;   /* controls logo size */
+  object-fit: contain;
+}
+
+/* MIDDLE: Description */
+.portfolio-middle {
+  flex: 1 1 50%;
+  padding: 1.5rem 2rem;        /* leave padding here for text readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-middle h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-middle p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* RIGHT: Thumbnail / Video */
+.portfolio-right {
+  flex: 0 0 35%;
+  overflow: hidden;
+  padding: 0;                  /* REMOVE padding so video hits edge */
+}
+
+.portfolio-right img,
+.portfolio-right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  transition: opacity 0.3s ease;
+
+  /* smooth fade into card */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%);
+mask-image: linear-gradient(to right, transparent 0%, black 2%);
+}
+
+.portfolio-horizontal-card:hover .portfolio-right img,
+.portfolio-horizontal-card:hover .portfolio-right video {
+  opacity: 1; /* fade in on hover */
+}
+
