@@ -1,14 +1,16 @@
 /* =========================
    RESET
 ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: #f6f7f9;
   color: #111;
   line-height: 1.6;

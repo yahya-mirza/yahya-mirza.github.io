@@ -18,9 +18,8 @@
       <button class="menu-toggle">Menu</button>
       <ul class="dropdown">
         <li><a href="#hero">About Me</a></li>
-         <li><a href="#portfolio">Engineering Portfolio</a></li>
+        <li><a href="#portfolio">Engineering Portfolio</a></li>
         <li><a href="#resume">Resume</a></li>
-       
       </ul>
     </nav>
   </header>
@@ -30,7 +29,7 @@
     <!-- =========================
          Hero Section
     ========================== -->
-    <section class="hero fade-in" id = "hero">
+    <section class="hero fade-in" id="hero">
       <div class="hero-content">
 
         <!-- LEFT: PHOTO CARD -->
@@ -38,19 +37,13 @@
           <img src="assets/images/pro-photo.jpg" alt="Professional Photo" class="hero-photo">
 
           <div class="hero-links">
-            <a 
-            href="assets/resume/Yahya_Mirza_Resume.pdf" 
-            class="hero-link"
-            download="Yahya_Mirza_Resume.pdf"
-            aria-label="Download Resume"
-            >
-  <img src="assets/icons/resume.svg" alt="Download Resume">
-</a>
-
-            <a href="mailto:yahyam0626@gmail.com" class="hero-link">
+            <a href="assets/resume/Yahya_Mirza_Resume.pdf" class="hero-link" download="Yahya_Mirza_Resume.pdf" aria-label="Download Resume">
+              <img src="assets/icons/resume.svg" alt="Download Resume">
+            </a>
+            <a href="mailto:yahyam0626@gmail.com" class="hero-link" aria-label="Email">
               <img src="assets/icons/email.svg" alt="Email">
             </a>
-            <a href="https://www.linkedin.com/in/yahya-mirza-09a04b334/" class="hero-link">
+            <a href="https://www.linkedin.com/in/yahya-mirza-09a04b334/" class="hero-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <img src="assets/icons/linkedin.svg" alt="LinkedIn">
             </a>
           </div>
@@ -61,16 +54,11 @@
           <h1>Yahya Mirza</h1>
           <p>Mechanical Engineering Student @ UC San Diego | Robotics & Mechatronics</p>
           <p>
-            
             Hey I'm Yahya, nice to meet you! At this website, you can find my engineering portfolio and resume below. <br><br>
 
-            In a rush? Take a look at my work over at Yonder Dynamics as well as take a look at my soccer robot! <br><br>
+            In a rush? Take a look at my work over at Yonder Dynamics as well as take a look at my whiteboard robot! <br><br>
            
-            At Yonder Dynamics, UCSD's competition mars rover team. I successfully led an end-to-end production of a linear slider mechaism capable of laterally translating a 30lb
-            robotic arm of 30lbs. On top of that, my peers and I (with the honor of "Best Manufacturing") successfully built a soccer robot equipped with a 9:1 flywheel kicker system. In addition, I am the co-founder and former project lead for Foothill College's 
-            award-winning FireFlight RC Plane, an ML-Driven, aerial sensing RC Plane for wildfire prediction 
-            and evacuation. 
-            
+            At Yonder Dynamics, UCSD's competition mars rover team, I successfully led an end-to-end production of a linear slider mechanism capable of laterally translating a 30lb robotic arm. In my free time, I have successfully built an x-y gantry system for a whiteboard drawing robot, a soccer robot equipped with a 9:1 flywheel kicker system (with the honor of "Best Manufacturing"), and co-founded/lead Foothill College's award-winning FireFlight RC Plane, an ML-Driven, aerial sensing RC Plane for wildfire prediction and evacuation. 
           </p>
         </div>
 
@@ -81,199 +69,138 @@
          Engineering Portfolio
     ========================== -->
     <section class="portfolio fade-in" id="portfolio">
-      
       <div class="portfolio-card-container">
-
         <h2>Engineering Portfolio</h2>
-        <p class="section-subtitle"></p>
 
-        
+       <!-- Featured Horizontal Card: Yonder Dynamics -->
+        <a href="projects/whiteboardrobot/" class="portfolio-horizontal-card fade-in">
+          <!-- Left Column: Video -->
+          <div class="portfolio-left">
+            <img src="projects/whiteboardrobot/images/Test3.png"></img>
+          </div>
 
-  
-  <!-- Left: Organization Image -->
-   <a href="projects/yonderdynamics/" class="portfolio-horizontal-card fade-in">
-  <div class="portfolio-left">
-    <img src="assets/images/yonder-logo.png" alt="Yonder Dynamics Logo">
-  </div>
+          <!-- Middle Column: Description -->
+          <div class="portfolio-middle">
+            <h3>Whiteboard Drawing Robot</h3>
+            <p>
+              As of 7/14/26, the x-y gantry along with a simple set of controls has been completed. WIP Tasks: (1) Electronics for positional control, image processing, and power distribution; (2) Software to interperet a given image into a set of motor movements (3) Hosting a website to upload images and send it to the robot. 
+            </p>
+          </div>
 
-  <!-- Middle: Description -->
-  <div class="portfolio-middle">
-    <h3>Yonder Dynamics - Roboitics Engineer</h3>
-    <p>
-      UCSD's competition Mars Rover Team. Contributed to the design and production of a linear slider 
-      mechanism for the 5-axis robotic arm, including CAD modeling, statics analysis, and fabrication 
-      process documentation.
-    </p>
-  </div>
+          <!-- Right Column: Video Animation -->
+          <div class="portfolio-right">
+            <video src="projects/whiteboardrobot/images/WhiteboardMoving.mp4" autoplay loop muted playsinline></video>
+          </div>
+        </a> <!-- Card fully closed now -->
+     
+        <!-- Featured Horizontal Card: Yonder Dynamics -->
+        <a href="projects/yonderdynamics/" class="portfolio-horizontal-card fade-in">
+          <!-- Left Column: Video -->
+          <div class="portfolio-left">
+            <video src="projects/yonderdynamics/images/Yonder_Time_Lapse.mp4" autoplay loop muted playsinline></video>
+          </div>
 
-  <!-- Right: Video Thumbnail -->
-  <div class="portfolio-right">
-    <video
-      src="projects/yonderdynamics/images/Yonder_Time_Lapse.mp4"
-      autoplay
-      loop
-      muted
-      playsinline
-    ></video>
-  </div>
-  </a>
+          <!-- Middle Column: Description -->
+          <div class="portfolio-middle">
+            <h3>Yonder Dynamics - Robotics Engineer</h3>
+            <p>
+              UCSD's competition Mars Rover Team. Led the design and production of a linear slider 
+              mechanism for the 5-axis robotic arm capable of over 500N payload, including CAD modeling, statics analysis, and fabrication 
+              process documentation.
+            </p>
+          </div>
 
+          <!-- Right Column: Video Animation -->
+          <div class="portfolio-right">
+            <video src="projects/yonderdynamics/images/Linear Slide Animation.mp4" autoplay loop muted playsinline></video>
+          </div>
+        </a> <!-- Card fully closed now -->
 
-      
-        
+        <!-- Secondary Project Grid -->
         <div class="portfolio-grid">
           
+          <!-- Project 1: FireFlight -->
           <a href="projects/fireflight/" class="portfolio-card fade-in">
             <img src="assets/images/Full Plane Model.png" alt="FireFlight RC Plane">
             <div class="card-content">
               <h3>FireFlight RC Plane</h3>
               <p>
-                Awarded "Excellence in Research" at Foothill College&#39;s RSL Symposium. FireFlight is an RC Plane designed and built for  wildfire prediction and evacuation.
-
+                Awarded "Excellence in Research" at Foothill College's RSL Symposium. Designed and built for wildfire prediction and evacuation.
               </p>
             </div>
           </a>
 
-         <!--
-          <a href="projects/yonderdynamics/" class="portfolio-card fade-in">
-            <img src="projects/yonderdynamics/images/Linear Slider Isometric View.png" alt="Linear Slider">
-            <div class="card-content">
-              <h3>Linear Slider Module - Yonder Dynamics</h3>
-              <p>
-                For UCSD's competition mars rover team, Yonder Dynamics. An end-to-end production of a linear slider mechanism for a 5-axis robotic arm of 30lbs 
-                
-              </p>
-            </div>
-          </a> -->
-
+          <!-- Project 2: Soccer Robot -->
           <a href="projects/stymbappe/" class="portfolio-card fade-in">
-  <video
-    class="portfolio-media"
-    src="projects/stymbappe/images/Competiton Match.mp4"
-    autoplay
-    loop
-    muted
-    playsinline
-  ></video>
+            <video class="portfolio-media" src="projects/stymbappe/images/Competiton Match.mp4" autoplay loop muted playsinline></video>
+            <div class="card-content">
+              <h3>Competition Soccer Robot - STYMBappé</h3>
+              <p>Awarded "Best Manufacturing" for UCSD's MAE 3 Annual Robot Contest 2025.</p>
+            </div>
+          </a>
 
-  <div class="card-content">
-    <h3>Competiton Soccer Robot - STYMBappé</h3>
-    <p>Awarded "Best Manufacturing" for UCSD's MAE 3 Annual Robot Contest 2025 by professors Hui Hui Qi and Nathan Delson.</p>
-  </div>
-</a>
-
-
+          <!-- Project 3: Shoulder Exoskeleton -->
           <a href="projects/shoulderexo/" class="portfolio-card fade-in">
-            <img src="projects/shoulderexo/images//Shoulder Printed Out.png" alt="Shoulder Exoskeleton">
+            <img src="projects/shoulderexo/images/Shoulder Printed Out.png" alt="Shoulder Exoskeleton">
             <div class="card-content">
               <h3>Shoulder Exoskeleton - Nanotech @ UC Berkeley</h3>
               <p>
-                Built a lightweight, wearable exoskeleton designed to smoothen lateral arm movement as corresponding muscles are stimulated via an integrated AI powered TENS unit apparatus. 
+                Lightweight exoskeleton designed to smoothen lateral arm movement, utilizing an integrated AI powered TENS unit apparatus.
               </p>
             </div>
           </a>
 
+          <!-- Project 4: Plant Waterer -->
           <a href="projects/plantwatering/" class="portfolio-card fade-in">
-  <video
-    class="portfolio-media"
-    src="projects/plantwatering/images/IMG_8926.mp4"
-    autoplay
-    loop
-    muted
-    playsinline
-  ></video>
+            <video class="portfolio-media" src="projects/plantwatering/images/IMG_8926.mp4" autoplay loop muted playsinline></video>
+            <div class="card-content">
+              <h3>Automatic Plant Watering Machine (WIP)</h3>
+              <p>Arduino-based automatic watering system tipping a can based on sensor inputs to optimize growth.</p>
+            </div>
+          </a>
 
-  <div class="card-content">
-    <h3>Automatic Plant Watering Machine (WIP)</h3>
-    <p>An Arduino Based Automatic Plant Watering System That Tips a Watering Can From Sensory Data To Optimize Plant Health and Growth</p>
-  </div>
-</a>
-
+          <!-- Project 5: Nerf Gun -->
           <a href="projects/motionnerfgun/" class="portfolio-card fade-in">
-            <img src="projects/motionnerfgun/images/Gun Assebly.png" alt="FireFlight RC Plane">
+            <img src="projects/motionnerfgun/images/Gun Assebly.png" alt="Motion Activated Nerf Gun">
             <div class="card-content">
               <h3>Motion Activated Nerf Gun</h3>
               <p>
-                An Arduino controlled Nerf Gun Utilizing an HC-SR501 PIR Motion Sensor and an SG90 Servo Motor
+                An Arduino-controlled Nerf Gun utilizing an HC-SR501 PIR sensor and an SG90 servo motor.
               </p>
             </div>
           </a>
 
+          <!-- Project 6: Misc -->
           <a href="projects/misc/" class="portfolio-card fade-in">
-            <img src="projects/misc/images/SAE Tire Stand FEA.png" alt="FireFlight RC Plane">
+            <img src="projects/misc/images/SAE Tire Stand FEA.png" alt="SAE Tire Stand FEA">
             <div class="card-content">
               <h3>Miscellaneous</h3>
               <p>
-                A collection of various smaller projects, including FEA analysis of a SAE Car Stand, Ball Bearing CAD, and more!
+                A collection of smaller projects, including FEA analysis of an SAE Car Stand, ball bearings, and more.
               </p>
             </div>
           </a>
 
-
-
-
-        </div>
-
-      </div>
+        </div> <!-- .portfolio-grid end -->
+      </div> <!-- .portfolio-card-container end -->
     </section>
 
-    <section class="resume-section fade-in" id = "resume">
-  <div class="resume-card">
-
-    <div class="resume-header">
-      <h2>Resume</h2>
-      <a href="assets/resume/Yahya_Mirza_Resume.pdf" target="_blank" class="resume-download">
-        Open Fullscreen
-      </a>
-    </div>
-
-    <div class="resume-viewer">
-      <iframe
-        src="assets/resume/Yahya_Mirza_Resume.pdf"
-        title="Yahya Mirza Resume"
-        loading="lazy">
-      </iframe>
-    </div>
-
-  </div>
-</section>
-
-    
     <!-- =========================
-         Experience Section
+         Resume Section
     ========================== -->
-    
-    
-    <!--  <section class="experience fade-in">
-      <h2>Past Experience</h2>
-
-      <div class="experience-cards">
-        <div class="card fade-in">
-          <h3>FireFlight RC Plane Project</h3>
-          <p class="role">Project Lead · 2024–Present</p>
-          <p>
-            Led a team to design and build an RC aircraft from scratch, focusing on aerodynamics, electronics, and structural optimization.
-          </p>
+    <section class="resume-section fade-in" id="resume">
+      <div class="resume-card">
+        <div class="resume-header">
+          <h2>Resume</h2>
+          <a href="assets/resume/Yahya_Mirza_Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-download">
+            Open Fullscreen
+          </a>
         </div>
-
-        <div class="card fade-in">
-          <h3>Robotics & Mechatronics Projects</h3>
-          <p class="role">Mechanical Engineer</p>
-          <p>
-            Designed mechanical systems using SolidWorks and Arduino-based control systems for automation and robotics applications.
-          </p>
+        <div class="resume-viewer">
+          <iframe src="assets/resume/Yahya_Mirza_Resume.pdf" title="Yahya Mirza Resume" loading="lazy"></iframe>
         </div>
       </div>
-    </section> -->
-
-    <!-- =========================
-         Call-to-Action Section
-          <section class="cta fade-in" id = "buttons">
-      <a href="resume.html" class="cta-btn">View Resume</a>
-      <a href="contact.html" class="cta-btn">Get in Touch</a>
     </section>
-    ========================== -->
-   
 
   </main>
 
