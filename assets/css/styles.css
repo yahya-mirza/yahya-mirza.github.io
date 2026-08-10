@@ -652,3 +652,45 @@ nav {
     height: 200px;
   }
 }
+
+
+/* Mobile fixes for portfolio horizontal cards */
+@media (max-width: 768px) {
+  /* Reduce outer page padding on tablets/mobile */
+  .portfolio {
+    padding: 0 1rem;
+  }
+
+  .portfolio-card-container {
+    padding: 1.25rem;
+  }
+
+  /* Stack card items vertically */
+  .portfolio-horizontal-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Reset flex percentage basis */
+  .portfolio-left,
+  .portfolio-middle,
+  .portfolio-right {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  /* Fix media dimensions on mobile */
+  .portfolio-left img,
+  .portfolio-left video,
+  .portfolio-right img,
+  .portfolio-right video {
+    height: 220px;
+    object-fit: cover;
+    -webkit-mask-image: none; /* Remove edge mask gradient on mobile */
+    mask-image: none;
+  }
+
+  .portfolio-middle {
+    padding: 1.25rem 1rem;
+  }
+}
