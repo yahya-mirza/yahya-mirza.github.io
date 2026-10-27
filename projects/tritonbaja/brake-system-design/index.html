@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brake System Design | Triton Baja</title>
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    .media-grid.analysis-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .analysis-grid .media-block,
+    .analysis-grid .media-image {
+      width: 100%;
+    }
+
+    .analysis-grid .media-image img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="project-navbar">
+    <a href="../" class="project-back">
+      &larr; Back to Triton Baja
+    </a>
+
+    <nav class="project-menu" aria-label="Triton Baja navigation">
+      <button class="project-menu-toggle" type="button"
+              aria-expanded="false" aria-controls="project-links">
+        Projects &#9662;
+      </button>
+
+      <ul id="project-links" class="project-dropdown">
+        <li><a href="../">Triton Baja Overview</a></li>
+        <li><a href="../ergonomics/">Ergonomics</a></li>
+        <li><a href="../brake-pedal-design/">Brake Pedal Design</a></li>
+        <li><a href="../brake-system-design/">Brake System Design</a></li>
+        <li><a href="../../../index.html#portfolio">Main Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Triton Baja — Brake System Design</h1>
+
+      <div class="media-grid analysis-grid">
+
+        <!-- Slide 1 -->
+        <div class="media-block">
+          <div class="media-image">
+            <img src="images/BrakeSystem1.png"
+                 alt="Brake System Design analysis slide 1"
+                 fetchpriority="high">
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="media-block">
+          <div class="media-image">
+            <img src="images/BrakeSystem2.png"
+                 alt="Brake System Design analysis slide 2"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="media-block">
+          <div class="media-image">
+            <img src="images/BrakeSystem3.png"
+                 alt="Brake System Design analysis slide 3"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="media-block">
+          <div class="media-image">
+            <img src="images/BrakeSystem4.png"
+                 alt="Brake System Design analysis slide 4"
+                 loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="../navigation.js"></script>
+</body>
+</html>

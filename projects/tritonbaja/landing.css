@@ -1,0 +1,59 @@
+/* Triton Baja overview page only. The homepage stylesheet is not modified. */
+.baja-overview {
+  margin-top: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+.baja-overview .overview-heading {
+  margin-bottom: 2rem;
+}
+
+.baja-overview .overview-heading h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.baja-overview .overview-heading p {
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+/* Matches the 180px media band of the secondary project grid,
+   but deliberately contains no image or video. */
+.baja-overview .card-media-empty {
+  height: 180px;
+  width: 100%;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.baja-overview .portfolio-card {
+  min-width: 0;
+}
+
+.baja-overview .card-content {
+  min-height: 132px;
+}
+
+.baja-overview .card-content p {
+  margin: 0;
+}
+
+.baja-overview .portfolio-card:focus-visible,
+.project-back:focus-visible,
+.project-menu-toggle:focus-visible,
+.project-dropdown a:focus-visible {
+  outline: 3px solid #64748b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .baja-overview {
+    margin-top: 2rem;
+  }
+  .baja-overview .card-content {
+    min-height: 0;
+  }
+}

@@ -1,131 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<header class="project-navbar">
-  <!-- Left: Back button -->
-  <a href="../../index.html#portfolio" class="project-back">
-    ← Back
-  </a>
-
-  <!-- Right: More Projects -->
-  <div class="project-menu">
-    <button class="project-menu-toggle">More Projects</button>
-    <ul class="project-dropdown">
-      
-      <li>
-        <a href="../stymbappe/index.html">Competition Soccer Robot</a>
-      </li>
-
-      <li>
-        <a href="../fireflight/index.html">FireFlight RC Plane</a>
-      </li>
-
-      <li>
-        <a href="../shoulderexo/index.html">Shoulder Exoskeleton</a>
-      </li>
-
-      <li>
-        <a href="../plantwatering/index.html">Automated Plant Watering Machine</a>
-      </li>
-
-      <li>
-        <a href="../motionnerfgun/">Motion Nerf Gun</a>
-      </li>
-
-      <li>
-        <a href="../misc/index.html">Miscellaneous</a>
-      </li>
-     
-    </ul>
-  </div>
-</header>
-
 <head>
-  <meta charset="UTF-8" />
-  <title>Whiteboard Drawing Robot</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triton Baja | Engineering Portfolio</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="landing.css">
+
+  <style>
+    .baja-overview .portfolio-card img {
+      object-fit: contain;
+      background: #f3f4f6;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1> Triton Baja - Driver Ergo + Brake Pedal Design</h1>
-  
+  <header class="project-navbar">
+    <a href="../../index.html#portfolio" class="project-back">
+      &larr; Back to Portfolio
+    </a>
 
-   
+    <nav class="project-menu" aria-label="Triton Baja navigation">
+      <button class="project-menu-toggle" type="button"
+              aria-expanded="false" aria-controls="project-links">
+        Projects &#9662;
+      </button>
 
-  
-   
+      <ul id="project-links" class="project-dropdown">
+        <li><a href="./">Triton Baja Overview</a></li>
+        <li><a href="ergonomics/">Ergonomics</a></li>
+        <li><a href="brake-pedal-design/">Brake Pedal Design</a></li>
+        <li><a href="brake-system-design/">Brake System Design</a></li>
+        <li><a href="../../index.html#portfolio">Main Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      
+  <main>
+    <section class="portfolio baja-overview"
+             aria-labelledby="baja-heading">
 
-      
-   <!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Constraints1.png" alt="Top Level Assembly">
+      <div class="portfolio-card-container">
+
+        <div class="overview-heading">
+          <h1 id="baja-heading">Triton Baja</h1>
+          <p>
+            Driver Interface &amp; Safety —
+            select a project area to explore.
+          </p>
         </div>
-        <div class="media-caption-card">
-          <p></p>
+
+        <div class="portfolio-grid">
+
+          <!-- Ergonomics -->
+          <a href="ergonomics/" class="portfolio-card">
+            <img src="ergonomics/images/Constraints1.png"
+                 alt="Preview of ergonomics analysis">
+
+            <div class="card-content">
+              <h3>Ergonomics</h3>
+              <p>Driver ergonomics and packaging.</p>
+            </div>
+          </a>
+
+          <!-- Brake Pedal Design -->
+          <a href="brake-pedal-design/" class="portfolio-card">
+            <img src="brake-pedal-design/images/BrakePedal1.png"
+                 alt="Preview of brake pedal design analysis">
+
+            <div class="card-content">
+              <h3>Brake Pedal Design</h3>
+              <p>Brake pedal design and mechanical integration.</p>
+            </div>
+          </a>
+
+          <!-- Brake System Design -->
+          <a href="brake-system-design/" class="portfolio-card">
+            <img src="brake-system-design/images/BrakeSystem1.png"
+                 alt="Preview of brake system design analysis">
+
+            <div class="card-content">
+              <h3>Brake System Design</h3>
+              <p>Brake system layout and design analysis.</p>
+            </div>
+          </a>
+
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Constraints2.png" alt="Top Level Assembly">
-        </div>
-        <div class="media-caption-card">
-          <p></p>
-        </div>
-      </div>
-
-<!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Results1.png" alt="Top Level Assembly">
-        </div>
-        <div class="media-caption-card">
-          <p></p>
-        </div>
-      </div>
-      
- 
-
-     <!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Results2.png" alt="Top Level Assembly">
-        </div>
-        <div class="media-caption-card">
-          <p></p>
-        </div>
-      </div>
-<!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Results3.png" alt="Top Level Assembly">
-        </div>
-        <div class="media-caption-card">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Media Block -->
-      <div class="media-block">
-        <div class="media-image">
-          <img src="images/Results4.png" alt="Top Level Assembly">
-        </div>
-        <div class="media-caption-card">
-          <p></p>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-<script src="../../assets/js/project-menu.js"></script>
+  <script src="navigation.js"></script>
 </body>
 </html>

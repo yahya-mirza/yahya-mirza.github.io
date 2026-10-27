@@ -1,0 +1,36 @@
+/* Blank media slots for the Triton Baja subsection pages.
+   These add to the existing Triton Baja project styles without altering them. */
+.media-image.media-empty {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 400px;
+  background: #e9edf2;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.media-grid .media-block {
+  min-width: 0;
+  width: 100%;
+}
+
+.media-grid .media-caption-card {
+  max-width: calc(100% + 24px);
+}
+
+.media-caption-card h2 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.media-caption-card p {
+  margin: 0;
+}
+
+.project-back:focus-visible,
+.project-menu-toggle:focus-visible,
+.project-dropdown a:focus-visible {
+  outline: 3px solid #64748b;
+  outline-offset: 3px;
+}

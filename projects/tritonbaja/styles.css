@@ -1,3 +1,4 @@
+
 /* =========================
    RESET
 ========================= */
@@ -11,7 +12,6 @@
 }
 
 body {
-
   background: #f6f7f9;
   color: #111;
   line-height: 1.6;
@@ -47,10 +47,10 @@ body {
 }
 
 /* =========================
-   MEDIA BLOCK (Independent)
+   MEDIA BLOCK
 ========================= */
 .media-block {
-  display: inline-flex;               /* prevents height matching */
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -67,11 +67,10 @@ body {
 .media-image video {
   width: 100%;
   max-width: 100%;
-  max-height: 500px;                  /* prevents overpowering */
+  max-height: 500px;
   height: auto;
-
   object-fit: contain;
-  border-radius: 16px;                /* rounded image */
+  border-radius: 16px;
   display: block;
 }
 
@@ -79,13 +78,12 @@ body {
    CAPTION CARD
 ========================= */
 .media-caption-card {
-  margin-top: 12px;                   /* space between image + caption */
-  padding: 14px 18px;                 /* fixed px padding */
-  width: calc(100% + 24px);           /* grows relative to image width */
+  margin-top: 12px;
+  padding: 14px 18px;
+  width: calc(100% + 24px);
   background: #f3f4f6;
   border-radius: 18px;
   text-align: center;
-
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
@@ -109,7 +107,7 @@ body {
 }
 
 /* =========================
-   Project Page Navbar
+   PROJECT PAGE NAVBAR
 ========================= */
 .project-navbar {
   display: flex;
@@ -181,7 +179,73 @@ body {
   background: #f3f4f6;
 }
 
-/* Open state */
 .project-dropdown.open {
   display: block;
+}
+
+/* =========================
+   TRITON BAJA OVERVIEW CARDS
+   Does not affect the homepage
+   or individual slide galleries.
+========================= */
+
+/* Prevent cards from stretching */
+.portfolio.baja-overview .portfolio-grid {
+  align-items: start;
+}
+
+/* Card appearance */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card {
+  display: block;
+  align-self: start;
+  min-width: 0;
+  height: auto;
+  background: #ffffff;
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+/* Hover animation */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Images fill the width naturally */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Compact text section */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card > .card-content {
+  min-height: 0;
+  height: auto;
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+/* Project titles */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card .card-content h3 {
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+/* Project descriptions */
+.portfolio.baja-overview .portfolio-grid > a.portfolio-card .card-content p {
+  margin: 0;
+  line-height: 1.5;
 }
